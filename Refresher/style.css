@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    background-color: #fffbf3;
+}
+
+.hide-mobile {
+    display: none;
+}
+
+.wrap {
+    margin: 2em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    background: #fff;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    list-style: none;
+    width: 40%;
+    text-align: right;
+    padding: 2em;
+    transform: translateX(100%);
+    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    li {
+        margin: 1em 0;
+
+        &:nth-of-type(1) {
+            margin-bottom: 2em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            font-size: 1.4rem;
+
+            &:hover {
+                color: chocolate;
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+.open {
+    transform: translateX(0);
+}
+
+h1,
+p {
+    text-align: center;
+}
+
+h1 {
+    margin-top: 2em;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+a.primary-cta {
+    background-color: chocolate;
+    padding: 1em;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #000;
+    border-radius: 0.3rem;
+}
+.cat{
+    position: relative;
+    height: 500px;
+    width: 100%;
+    img{
+        width: 70%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .inner-circle, .outer-circle{
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .inner-circle{
+        background: #ffebc3;
+        width: 300px;
+        height: 300px;
+        z-index: -1;
+        
+    }
+    .outer-circle{
+        background: #fff;
+        width: 500px;
+        height: 500px;
+        z-index: -2;
+
+    }
+}

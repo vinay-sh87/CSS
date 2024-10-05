@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.trans {
+    width: 150px;
+    height: 150px;
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(100px, 50px) rotate(-10deg) skew(-15deg) scale(1.2, 1.5);
+    /* we can use scaleX and scaleY too */
+    transform: matrix(1, -0.3, 0, 1, 0, 0) rotateZ(20deg);
+    /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+
+}
